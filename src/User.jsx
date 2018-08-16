@@ -20,8 +20,10 @@ handleChange (e){
 }
 
 handleSubmit(e){
-    console.log(this.state.value);
+    document.body.appendChild(this.state.value);
+    console.log(this.state.value)
     e.preventDefault();
+    
 }
 
   render() {
