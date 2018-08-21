@@ -8,10 +8,13 @@ class User extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.cliked = this.cliked.bind(this);
     
     this.state = {
         value: " "
     };
+
+    this.mainHTML = [<div> main </div>]
      
 }
     
@@ -20,10 +23,16 @@ handleChange (e){
 }
 
 handleSubmit(e){
-    document.body.appendChild(this.state.value);
+  
     console.log(this.state.value)
     e.preventDefault();
+
     
+}
+ cliked(e){
+
+    console.log("clicked");
+  //  e.preventDefault();
 }
 
   render() {
@@ -34,8 +43,9 @@ handleSubmit(e){
       <input type="text" value={this.state.value}   onChange={this.handleChange} />
       </label>
       <input type = "submit" value= "Submit" />
-     </form>
-     </div>
+      </form>
+     <button onClick = {this.cliked}></button>
+     </div> 
     );
   }
 }
