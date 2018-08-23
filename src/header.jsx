@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class header extends React.Component {
   constructor(props) {
@@ -20,31 +20,13 @@ export default class header extends React.Component {
   render() {
     return (
       <div>
-        <Nav pills>
+        <Nav className = "navi">
+          
+         
           <NavItem>
-            <NavLink href="#" active>Link</NavLink>
+            <NavLink href="#">About</NavLink>
           </NavItem>
-          <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <NavItem>
-            <NavLink href="#">Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">Disabled Link</NavLink>
-          </NavItem>
+       
         </Nav>
       </div>
     );

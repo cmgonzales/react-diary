@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { label, input, } from 'reactstrap';
+import List from './inputs';
 
 class User extends Component {
 
@@ -10,8 +11,9 @@ class User extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   
     
-    this.state = {ans: [],
-        value: " "
+    this.state = {
+        value: " ",
+        ans:[]
     };
     
 }
@@ -21,9 +23,12 @@ handleChange (e){
 }
 
 handleSubmit(e){
-  this.setState({ans: e.target.value})
-   console.log(this.state.ans)
-  
+
+   e.preventDefault();
+   this.setState({
+      value: '',
+      ans: [...this.state.ans, this.state.value]
+    });
 }
 
 
@@ -31,16 +36,11 @@ handleSubmit(e){
     return (
       <div>
     
-      <label>Diary Entry
+      <label className = "title">Diary Entry
       <input type="text" value={this.state.value}   onChange={this.handleChange} />
       </label>
-      <button value = {this.state.value} onClick = {this.handleSubmit}>submit</button>
-      <div>
-      <ul>
-      {this.state.ans}
-      </ul>
-      </div>      
-     
+      <button value = {this.state.value} onClick = {this.handleSubmit}>submit</button>      
+      <List ans={this.state.ans} /> 
      </div>
     );
   }
