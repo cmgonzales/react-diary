@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { label, input, } from 'reactstrap';
+import { label, textarea, Button } from 'reactstrap';
 import List from './inputs';
 
 class User extends Component {
@@ -37,9 +37,11 @@ handleSubmit(e){
       <div>
     
       <label className = "title">Diary Entry
-      <input type="text" value={this.state.value}   onChange={this.handleChange} />
+      <br/>
+      <textarea type="text" value={this.state.value}   onChange={this.handleChange} />
       </label>
-      <button value = {this.state.value} onClick = {this.handleSubmit}>submit</button>      
+      <br/>
+      <Button color="primary"  value = {this.state.value} onClick = {this.handleSubmit}>submit</Button>      
       <List ans={this.state.ans} /> 
      </div>
     );
