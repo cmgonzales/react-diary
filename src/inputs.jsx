@@ -2,11 +2,12 @@
 import React from 'react';
 
 const List = props => (
-  <ul>
+  <div className = "input">
     {
       props.ans.map((item, index) => <p key={index}>{item}</p>)
     }
-  </ul>
+    
+  </div>
 );
 
 export default List;
