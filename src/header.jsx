@@ -20,13 +20,10 @@ export default class header extends React.Component {
   render() {
     return (
       <div>
-        <Nav className = "navi">
-          
-         
+        <Nav className = "navi">         
           <NavItem>
             <NavLink href="#">About</NavLink>
           </NavItem>
-       
         </Nav>
       </div>
     );

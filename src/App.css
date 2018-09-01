@@ -58,5 +58,8 @@ p{
   background-color: white;
   width: 70%;
   margin: 0 auto;
+  border-radius: 25px;
+  height: 140px;
+  padding-left: 15px;
 }
  

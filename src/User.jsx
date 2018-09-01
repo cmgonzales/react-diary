@@ -3,35 +3,25 @@ import { label, textarea, Button, Container, Row,  Col } from 'reactstrap';
 import List from './inputs';
 
 class User extends Component {
-
     constructor(props){
     super(props)
-
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  
-    
+    this.handleSubmit = this.handleSubmit.bind(this); 
     this.state = {
         value: " ",
         ans:[]
-    };
-    
-}
-    
+    };    
+}   
 handleChange (e){
         this.setState({value: e.target.value})
 }
-
 handleSubmit(e){
-
    e.preventDefault();
    this.setState({
       value: '',
       ans: [...this.state.ans, this.state.value]
     });
 }
-
-
   render() {
     return (
       <div>
