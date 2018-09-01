@@ -38,10 +38,10 @@ handleSubmit(e){
       <Container>
       <Row>
       <Col xs="6" sm="4"></Col>
-      <Col xs="6" sm="4">
+      <Col md="6" sm="6">
       <label className = "title">Diary Entry
       <br/>
-      <textarea type="text" value={this.state.value}   onChange={this.handleChange} />
+      <textarea className = "textarea" type="text" value={this.state.value}   onChange={this.handleChange} />
       </label>
       <br/>
       <Button color="primary"  value = {this.state.value} onClick = {this.handleSubmit}>submit</Button>      
@@ -49,7 +49,10 @@ handleSubmit(e){
       <Col xs="6" sm="4"></Col>
       </Row>
       </Container>
+     
+      
       <List ans={this.state.ans} /> 
+     
       
      </div>
     );
