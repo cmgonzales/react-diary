@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { label, textarea, Button, Container, Row,  Col } from 'reactstrap';
 import List from './inputs';
 
+//add if statement == if text != no value create a warning sign
+
 class User extends Component {
     constructor(props){
     super(props)
@@ -39,11 +41,7 @@ handleSubmit(e){
       <Col xs="6" sm="4"></Col>
       </Row>
       </Container>
-     
-      
-      <List ans={this.state.ans} /> 
-     
-      
+      <List className = "list" ans={this.state.ans} /> 
      </div>
     );
   }
