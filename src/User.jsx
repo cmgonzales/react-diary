@@ -41,8 +41,15 @@ handleSubmit(e){
       <Col xs="6" sm="4"></Col>
       </Row>
       </Container>
+      <Container>
+      <Row>
+      <Col>
       <List className = "list" ans={this.state.ans} /> 
-     </div>
+      </Col>
+      </Row>
+    </Container>
+    
+      </div>
     );
   }
 }
